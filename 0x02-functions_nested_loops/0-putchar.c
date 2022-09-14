@@ -1,18 +1,18 @@
+#include <unistd.h>
 #include "main.h"
+
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+  * main - Check Description
+  * Description: It prints the word Main, followed by a new line.
+  * Return: 0
+  */
 int main(void)
 {
-	char *sh = "_putchar";
+	char word[8] = "_putchar";
+		int i;
 
-	while (*sh)
-	{
-		_putchar(*sh);
-		sh++;
-	}
+	for (i = 0; i < 9; i++)
+	_putchar(word[i]));
 	_putchar('\n');
 
 	return (0);
