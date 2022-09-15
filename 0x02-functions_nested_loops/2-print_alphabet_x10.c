@@ -4,18 +4,22 @@
  * print_alphabet_x10 - Check description
  * Description: function uses _putchar function
  * to print alphabet in lowercase 10 times
- * Return: Nothing.
+ * Return: x10 a-z
  */
-
 void print_alphabet_x10(void)
 {
-	char i;
-	int j;
+	int n, co;
 
-	for (j = 0; j <= 10; j++)
+	co = 0;
+
+	while (co < 10)
 	{
-	for (i = 0; i <= 'z'; i++)
-		_putchar(i);
+	for (n = 'a'; n <= 'z'; n++)
+		{
+		_putchar(n);
+		}
+	co++;
 	_putchar('\n');
 	}
+
 }
