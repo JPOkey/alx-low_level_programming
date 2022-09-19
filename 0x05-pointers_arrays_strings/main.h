@@ -8,5 +8,6 @@ void _puts(char *str);
 void print_rev(char *s);
 void _putchar();
 void rev_string(char *s);
+void puts2(char *str);
 
 #endif /* MAIN_H */
