@@ -1,19 +1,34 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * cap_string - a function that capitalizes all words of a string
+ * @n: input string
+ * Return: caps on first letter of a separator
  */
-int main(void)
+char *cap_string(char *n)
 {
+	int i, x;
+	int cap = 32;
+	int separators[] = {',', ';', '.', '?', '"',
+		 '(', ')', '{', '}', ' ', '\n', '\t'};
 
-	char str[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
-	char *ptr;
+	for (i = 0; n[i] != '\0'; i++)
+	{
+		if (n[i] >= 'a' && n[i] <= 'z')
+		{
+			n[i] = n[i] - cap;
+		}
 
-	ptr = cap_string(str);
-	printf("%s", ptr);
-	printf("%s", str);
-	return (0);
+		cap = 0;
+
+		for (x = 0; x <= 12; x++)
+		{
+			if (n[i] == separators[x])
+			{
+				x = 12;
+				cap = 32;
+			}
+		}
+	}
+	return (n);
 }
