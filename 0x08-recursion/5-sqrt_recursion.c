@@ -1,16 +1,17 @@
 #include "main.h"
-int squareroot(int n, int i);
+
 /**
  * _sqrt_recursion - no loop, 1. 2nd function - checks for perfect square
  * @n: input
  * Return: Always 0 (Success)
  */
-int _sqrt_recursion(int n)
+int sqrt_check(int g, int c)
 {
-	if (n < 0)
+	if (g * g == c)
+		return (g);
+	if (g * g > c)
 		return (-1);
-	else
-		return (squareroot(n, (n + 1) / 2));
+	return (sqrt_check(g + 1, c));
 }
 /**
  * squareroot - checks if perfect square
@@ -18,12 +19,9 @@ int _sqrt_recursion(int n)
  * @i: counter
  * Return: if square root
  */
-int squareroot(int n, int i)
+int _sqrt_recursion(int n)
 {
-	if (i < 1)
-		return (-1);
-	else if (i * i == n)
-		return (i);
-	else
-		return (squareroot(n, i - 1));
+	if (n == 0)
+		return (0);
+	return (sqrt_check(1, n));
 }
