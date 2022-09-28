@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion - no loop, 1. 2nd function - checks for perfect square
- * @n: input
- * Return: Always 0 (Success)
+ * sqrt_check - checks for the square root of c
+ * @g:guess at sqrt
+ * @c: number to find sqrt of
+ *
+ * Return: -1 or sqrt of c
  */
 int sqrt_check(int g, int c)
 {
@@ -14,14 +16,15 @@ int sqrt_check(int g, int c)
 	return (sqrt_check(g + 1, c));
 }
 /**
- * squareroot - checks if perfect square
- * @n: input
- * @i: counter
- * Return: if square root
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: integer to find sqrt of
+ *
+ * Return: natural square root or -1
  */
 int _sqrt_recursion(int n)
 {
 	if (n == 0)
 		return (0);
+
 	return (sqrt_check(1, n));
 }
