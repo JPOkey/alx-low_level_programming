@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 
-
 /**
  * _print - moves a string one place to the left and prints the string
  * @str: string to move
@@ -112,6 +111,7 @@ int main(int argc, char *argv[])
 	char *a;
 	char *t;
 	char e[] = "Error\n";
+
 	if (argc != 3 || check_for_digits(argv))
 	{
 		for (ti = 0; e[ti]; ti++)
