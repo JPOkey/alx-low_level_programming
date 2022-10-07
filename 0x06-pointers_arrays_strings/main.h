@@ -6,5 +6,6 @@ char *cap_string(char *);
 char *leet(char *);
 void print_buffer(char *b, int size);
 void print_number(int n);
+int _putchar(char c);
 
 #endif /* MAIN_H */
