@@ -41,7 +41,7 @@ size_t free_listint_safe(listint_t **head)
 	listint_t **list = NULL;
 	listint_t *next;
 
-if (head == NULL || *head == NULL)
+	if (head == NULL || *head == NULL)
 		return (num);
 	while (*head != NULL)
 	{
