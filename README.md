@@ -1,3 +1,3 @@
-# C FUnctions Nested Loops
+# C Functions Nested Loops
 
 
